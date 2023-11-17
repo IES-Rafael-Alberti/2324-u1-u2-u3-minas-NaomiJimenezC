@@ -1,5 +1,6 @@
 import re
-def seleccionar_casilla()->tuple:
+from src.generacion_tablero import generar_tablero
+def seleccionar_casilla(tablero:list)->tuple:
     """
     Se encarga de recoger las coordenadas por consola.
     Se usan expresiones regulares para asegurar el formato
@@ -15,6 +16,9 @@ def seleccionar_casilla()->tuple:
         formato_coodenadas = "\d{1},\d{1}"
         try:
             if re.match(formato_coodenadas,casilla_seleccionada):
-                return tuple(map(int,casilla_seleccionada.split(",")))
+                casilla = tuple(map(int,casilla_seleccionada.split(",")))
+                if all(coordenada < len(tablero) for coordenada in casilla ) :
+                    return casilla
         except:
             pass
+
