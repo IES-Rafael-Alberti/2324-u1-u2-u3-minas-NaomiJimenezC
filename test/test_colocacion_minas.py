@@ -1,9 +1,9 @@
 from src.generacion_tablero import generar_tablero
+from src.colocacion_minas import colocacion_mina
 
-
-def test_colocacion_tablero():
+def test_colocacion_mina_en_tablero():
     tablero_generado = generar_tablero()
-    colocar_minas(tablero_generado)
+    colocacion_mina(tablero_generado)
 
     minas_colocadas = 0
 
