@@ -1,7 +1,7 @@
 import random
 
 
-def colocacion_mina(tablero:list):
+def colocacion_mina(tablero:list,minas_a_colocar:int):
     """
     Coloca las minas en un tablero de manera aleatoria.
     Parameters
@@ -9,10 +9,10 @@ def colocacion_mina(tablero:list):
     tablero
         Tablero donde hay que colocar las minas
     """
-    MINAS = 8
+
     minas_colocadas = 0
 
-    while minas_colocadas != MINAS:
+    while minas_colocadas != minas_a_colocar:
         fila = random.randint(0,len(tablero)-1)
         columna = random.randint(0,len(tablero)-1) #TODO cambia lo del 7
 

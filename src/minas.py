@@ -7,8 +7,10 @@ Este ejercicio es una excelente manera de evaluar y mejorar las habilidades de p
 
 """
 
-import random
+from src.Procesado.generacion_tablero import generar_tablero
+from src.Procesado.colocacion_minas import colocacion_mina
 
+MINAS = 10
 def jugar():
     """
     Esta función ejecuta el juego.
@@ -21,3 +23,8 @@ if __name__ == "__main__":
     Esta sección del código se ejecuta solo si ejecutamos este archivo directamente.
     """
     jugar()
+    tablero_prueba = generar_tablero()
+    colocacion_mina(tablero_prueba,MINAS)
+
+    for fila in tablero_prueba:
+        print(fila)
