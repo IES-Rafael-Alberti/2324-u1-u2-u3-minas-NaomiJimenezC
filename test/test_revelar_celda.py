@@ -1,4 +1,4 @@
-from src.revelar_celda import revelar_celda
+from src.Procesado.revelar_celda import revelar_celda
 import pytest
 
 tablero_prueba = [

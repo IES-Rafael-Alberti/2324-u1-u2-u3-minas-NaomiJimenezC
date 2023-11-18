@@ -1,5 +1,6 @@
 import re
-from src.generacion_tablero import generar_tablero
+
+
 def seleccionar_casilla(tablero:list)->tuple:
     """
     Se encarga de recoger las coordenadas por consola.

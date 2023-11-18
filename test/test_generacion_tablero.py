@@ -1,4 +1,4 @@
-from src.generacion_tablero import generar_tablero
+from src.Procesado.generacion_tablero import generar_tablero
 
 
 def test_asegurar_longitud_tablero():

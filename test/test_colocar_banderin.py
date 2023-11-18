@@ -1,5 +1,5 @@
-from src.generacion_tablero import generar_tablero
-from src.colocar_banderin import  colocar_banderin
+from src.Procesado.generacion_tablero import generar_tablero
+from src.Procesado.colocar_banderin import  colocar_banderin
 
 def test_colocacion_bandera_correcta():
     tablero_prueba = generar_tablero()
