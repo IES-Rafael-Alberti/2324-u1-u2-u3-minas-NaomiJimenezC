@@ -1,5 +1,3 @@
-from src.generacion_tablero import generar_tablero
-
 def mostrar_tablero(tablero_a_mostrar:list)->str:
 
     """

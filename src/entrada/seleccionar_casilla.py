@@ -17,7 +17,7 @@ def seleccionar_casilla(tablero:list)->tuple:
         try:
             if re.match(formato_coodenadas,casilla_seleccionada):
                 casilla = tuple(map(int,casilla_seleccionada.split(",")))
-                if all(coordenada < len(tablero) for coordenada in casilla ) :
+                if all(coordenada < len(tablero) for coordenada in casilla) :
                     return casilla
         except:
             pass
