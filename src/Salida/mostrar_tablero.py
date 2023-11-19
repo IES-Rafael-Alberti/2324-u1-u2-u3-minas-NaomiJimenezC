@@ -15,7 +15,7 @@ def mostrar_tablero(tablero_a_mostrar:list)->str:
     mensaje_tablero = ""
     for fila in tablero_a_mostrar:
         for celda in fila:
-            mensaje_tablero += celda + " "
+            mensaje_tablero += str(celda) + " "
         mensaje_tablero += "\n"
 
         # te quiero post https://www.lawebdelprogramador.com/foros/Python/1418909-Imprimir-matriz-sin-corchetes.html
