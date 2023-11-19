@@ -65,7 +65,14 @@ def jugar():
             case "3":
                 no_quiero_seguir_jugando = True
 
+    if ha_ganado:
+        print("Has ganado")
+    if ha_perdido:
+        print("Has perdido")
+    if no_quiero_seguir_jugando:
+        print("No quisiste seguir jugando")
 
+    print("Resultado final: \n" + mostrar_tablero(tablero_falso))
 
 if __name__ == "__main__":
     """
