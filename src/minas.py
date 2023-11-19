@@ -14,6 +14,7 @@ from src.Procesado.contar_celdas_no_minas import contar_celdas_vacias
 from src.Procesado.revelar_celda import revelar_celda
 from src.Procesado.comprobar_victoria import verificar_victoria
 from src.Procesado.colocar_banderin import colocar_banderin
+from src.Procesado.colocar_cantidad_minas_cerca import colocar_cantidad_minas_cercanas
 from src.Procesado.cambiar_contenido_celda_entre_tableros import cambiar_contenido_entre_tableros
 from src.Salida.mostrar_tablero import mostrar_tablero
 from src.Salida.menu import mostrar_menu
@@ -26,18 +27,24 @@ def jugar():
     Esta función se encarga de ejecutar el juego
     """
 
+    #inicialización
     tablero_falso = generar_tablero()
     tablero_real = generar_tablero()
     colocacion_mina(tablero_real,MINAS)
-    celdas_restantes = contar_celdas_vacias(tablero_real,MINAS)
+    colocar_cantidad_minas_cercanas(tablero_real)
 
+    #Condiciones de seguir la partida
+    celdas_restantes = contar_celdas_vacias(tablero_real, MINAS)
     ha_ganado = False
     ha_perdido = False
     no_quiero_seguir_jugando = False
 
+    #Menu y tablero grafico
+      # cambialo luego por el tablero falso
+    menu = mostrar_menu()
+
     while ha_perdido != True and ha_ganado != True and no_quiero_seguir_jugando != True:
-        tablero_grafico = mostrar_tablero(tablero_falso) #cambialo luego por el tablero falso
-        menu = mostrar_menu()
+        tablero_grafico = mostrar_tablero(tablero_falso)
         print(tablero_grafico, menu)
         opcion_escogida = escoger_opcion()
 

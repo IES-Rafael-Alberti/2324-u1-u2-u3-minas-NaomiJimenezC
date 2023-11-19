@@ -17,4 +17,4 @@ def cambiar_contenido_entre_tableros(tablero_real:list,tablero_falso:list,casill
     """
     fila = casilla_seleccionada[0]
     columa = casilla_seleccionada[1]
-    tablero_falso[fila][columa] = tablero_real[fila][columa]
+    tablero_real[fila][columa] = tablero_falso[fila][columa]
